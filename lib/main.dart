@@ -4,12 +4,7 @@ import 'viewmodels/calculator_view_model.dart';
 import 'views/calculator_view.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (_) => CalculatorViewModel(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(ChangeNotifierProvider(create: (_) => CalculatorViewModel(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -17,10 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'MVVM Calculator',
-      home: CalculatorView(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, title: 'MVVM Calculator', home: CalculatorView());
   }
 }
